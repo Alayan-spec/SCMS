@@ -53,9 +53,18 @@ class person{
         cout<<"GRADE B"<<endl;
     else if(gpa>=2.0)
     cout<<"GRADE C"<<endl;
-else cout<<"GRADE F"<<endl;}
-
+else cout<<"GRADE F"<<endl; }
+        void displayInfo(){
+            cout<<"Student Information: "<<endl;
+            cout<<"Name: "<<name<<endl;
+            cout<<"CNIC: "<<cnic<<endl;
+            cout<<"Age: "<<age<<endl;
+            cout<<"Contact: "<<contact<<endl;
+            cout<<"Roll No: "<<rollno<<endl;
+            cout<<"Semester: "<<semester<<endl;
+            cout<<"GPA: "<<gpa<<endl;}
         };
+<<<<<<< HEAD
     } 
     //part 2
     class course{
@@ -100,3 +109,46 @@ else cout<<"GRADE F"<<endl;}
             out<<"\nCourse Code:"<<
          }
     }
+=======
+        class faculty:public person {
+            private:
+            string employeeID;
+            string department;
+            string designation;
+            public:
+            faculty(){}
+            faculty(string n,string c,int a,string con,string id,string dept,string des):person(n,c,a,con){
+                employeeID=id;
+                department=dept; }
+            void displayInfo(){
+                cout<<"Faculty Information: "<<endl;
+                cout<<"Name: "<<name<<endl;
+                cout<<"Employee ID: "<<employeeID<<endl;
+                cout<<"department "<<department<<endl;
+                cout<<"designation "<<designation<<endl;    }
+        };
+        class staff:public person {
+            private:
+            string staffID;
+            string role;
+            string salary;
+            public:
+            staff(){}
+            staff(string n,string c,int a,string con,string id,string r,double s):person(n,c,a,con){
+                staffID=id;
+                role=r;
+                salary=s; }
+            void displayInfo(){
+                cout<<"Staff Information: "<<endl;
+                cout<<"Name: "<<name<<endl;
+                cout<<"Staff ID: "<<staffID<<endl;
+                cout<<"Role: "<<role<<endl;
+                cout<<"Salary: "<<salary<<endl;}
+    };
+    Student students[100];
+    faculty faculty members[50];
+    staff staff members[50];
+    int studentCount = 0;
+    int facultyCount = 0;
+    int staffCount = 0;
+>>>>>>> 0de68080b063f40e107f1eaded6fc27a38b5b639
