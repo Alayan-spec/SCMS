@@ -56,6 +56,47 @@ class person{
 else cout<<"GRADE F"<<endl;}
 
         };
-    }
-cout<<"hello"
+    } 
+    //part 2
+    class course{
+        private:
+        string coursecode;
+        string coursename;
+        int credithours;
+        int maxcapacity;
+        int enrolledcount;
+        public:
+         course(){
+            enrolledcount=0;
+         }
+         course(string code,string name,int credit,int capacity)
+         {
+            courseCode=code;
+            courseName=name;
+            creditHours=credit;
+            maxCapacity=capacity;
+            enrolledCount=0;
+         }
+         string getcode(){
+            return courseCode;
+         }
+         string getName(){
+            return courseName;
+         }
+         void enrollStudent(){
+            if(enrolledCount>=maxCapacity)
+            throw CapacityExceededException();
+            enrolledCount++;
+            cout<<"Student Enrolled Sucessfully"<<endl;
+         }
+         bool operator==(Course c){
+            if(courseCode ==c.courseCode)
+            return true;
 
+            return false;
+         }
+         operator<<friend ostream&operator<<(ostream&out, Course c)
+         {
+            out<<"\nCourse Code:"<<
+         }
+    }
