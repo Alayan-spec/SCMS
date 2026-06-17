@@ -64,52 +64,8 @@ else cout<<"GRADE F"<<endl; }
             cout<<"Semester: "<<semester<<endl;
             cout<<"GPA: "<<gpa<<endl;}
         };
-<<<<<<< HEAD
     } 
-    //part 2
-    class course{
-        private:
-        string coursecode;
-        string coursename;
-        int credithours;
-        int maxcapacity;
-        int enrolledcount;
-        public:
-         course(){
-            enrolledcount=0;
-         }
-         course(string code,string name,int credit,int capacity)
-         {
-            courseCode=code;
-            courseName=name;
-            creditHours=credit;
-            maxCapacity=capacity;
-            enrolledCount=0;
-         }
-         string getcode(){
-            return courseCode;
-         }
-         string getName(){
-            return courseName;
-         }
-         void enrollStudent(){
-            if(enrolledCount>=maxCapacity)
-            throw CapacityExceededException();
-            enrolledCount++;
-            cout<<"Student Enrolled Sucessfully"<<endl;
-         }
-         bool operator==(Course c){
-            if(courseCode ==c.courseCode)
-            return true;
-
-            return false;
-         }
-         operator<<friend ostream&operator<<(ostream&out, Course c)
-         {
-            out<<"\nCourse Code:"<<
-         }
-    }
-=======
+    
         class faculty:public person {
             private:
             string employeeID;
@@ -151,4 +107,4 @@ else cout<<"GRADE F"<<endl; }
     int studentCount = 0;
     int facultyCount = 0;
     int staffCount = 0;
->>>>>>> 0de68080b063f40e107f1eaded6fc27a38b5b639
+
